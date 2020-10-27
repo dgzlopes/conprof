@@ -9,7 +9,7 @@ RUN apk add --no-cache graphviz \
     && chown -R nobody:nogroup /etc/conprof /conprof
 
 USER       nobody
-EXPOSE     8080
+EXPOSE     10902
 ENTRYPOINT [ "/bin/conprof" ]
 CMD        [ "all", \
              "--storage.tsdb.path=/conprof", \
